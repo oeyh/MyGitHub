@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 //Sort an array A using insertion sort. Notice it is to be passed by reference.
-void sort(/* what's the argument data type?*/ A, int n){
+void sort(int* A, int n){
 	int tmp;
 	int i;
 	int j;
