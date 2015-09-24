@@ -10,15 +10,16 @@ int main() {
 	argument or return types of the binary tree functions, our grading code
 	won't work!
 	*/
-    insert_node(1, 599);
-    insert_node(3, 293);
-    insert_node(5, 177);
-    insert_node(9, 991);
-    insert_node(8, 123);
+    node *Nd = malloc(5*sizeof(node)); 
+    insert_node(0, 599);
+    insert_node(1, 293);
+    insert_node(2, 177);
+    insert_node(3, 991);
+    insert_node(4, 123);
     
-    printf("%d\n", find_node_data(9));
+    printf("%d\n", find_node_data(3));
     printf("%d\n", find_node_data(10));
     
-
+    free(Nd);
 	return 0;
 }

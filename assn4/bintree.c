@@ -8,12 +8,12 @@ node *root = NULL;
 
 // Insert a new node into the binary tree with node_id and data
 void insert_node(int node_id, int data) {
-    node *temp = root;
-    node *newNode;
-    newNode->node_id = node_id;
-    newNode->data = data;
-    newNode->left_child = NULL;
-    newNode->right_child = NULL;
+    node *temp = malloc(sizeof(node));
+    temp = root;
+    Nd[note_id]->node_id = node_id;
+    Nd[note_id]->data = data;
+    Nd[note_id]->left_child = NULL;
+    Nd[note_id]->right_child = NULL;
     
     while (temp != NULL) {
         if (node_id < temp->node_id) {
@@ -24,8 +24,8 @@ void insert_node(int node_id, int data) {
         }
     }
     
-    newNode = temp;
-
+    Nd[note_id] = temp;
+    free(temp);
 }
 
 // Find the node with node_id, and return its data
