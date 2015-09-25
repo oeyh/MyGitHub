@@ -1,5 +1,8 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "bintree.h"
+
+node Nd[5];
 
 int main() {
 	/*
@@ -10,7 +13,8 @@ int main() {
 	argument or return types of the binary tree functions, our grading code
 	won't work!
 	*/
-    node *Nd = malloc(5*sizeof(node)); 
+  
+    
     insert_node(0, 599);
     insert_node(1, 293);
     insert_node(2, 177);
@@ -20,6 +24,6 @@ int main() {
     printf("%d\n", find_node_data(3));
     printf("%d\n", find_node_data(10));
     
-    free(Nd);
+    // free(Nd);
 	return 0;
 }

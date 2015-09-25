@@ -1,4 +1,5 @@
 #include <stddef.h>
+#include <stdlib.h>
 #include "bintree.h"
 
 ///*** DO NOT CHANGE ANY FUNCTION DEFINITIONS ***///
@@ -10,10 +11,11 @@ node *root = NULL;
 void insert_node(int node_id, int data) {
     node *temp = malloc(sizeof(node));
     temp = root;
-    Nd[note_id]->node_id = node_id;
-    Nd[note_id]->data = data;
-    Nd[note_id]->left_child = NULL;
-    Nd[note_id]->right_child = NULL;
+    extern node *Nd;
+    // Nd[note_id]->node_id = node_id;
+    // Nd[note_id]->data = data;
+    // Nd[note_id]->left_child = NULL;
+    // Nd[note_id]->right_child = NULL;
     
     while (temp != NULL) {
         if (node_id < temp->node_id) {
@@ -24,7 +26,7 @@ void insert_node(int node_id, int data) {
         }
     }
     
-    Nd[note_id] = temp;
+    Nd[node_id] = *temp;
     free(temp);
 }
 
